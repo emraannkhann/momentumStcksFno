@@ -1,0 +1,46 @@
+name: Chartink Intraday Screener Runner
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+  # Allows running the workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Cron Schedules (Monday to Friday)
+  # 1. 04:05 UTC = 09:35 AM IST
+  # 2. 07:30 UTC = 01:00 PM IST
+  schedule:
+    - cron: '5 4 * * 1-5'
+    - cron: '30 7 * * 1-5'
+
+jobs:
+  run-screener:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Install Playwright Browsers & System Dependencies
+      run: |
+        python -m playwright install chromium --with-deps
+
+    - name: Execute Chartink Screener
+      env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      run: |
+        python uiBullishAndBearishScans.py
