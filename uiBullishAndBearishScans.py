@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 # CONFIGURATION
 # Replace with your actual Discord Webhook URL
 # ---------------------------------------------------------
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1519223896606249042/MGW78FKpd9bksUcjg78ZehYqPuFb0T_shOaAggqcBPQhxqzHVombxDtXoRn3t-Wzx3qi"
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1521804732140752978/Ca-tLLR4z5UiJ1fIsTbmKLmIp_qNqzaYkvJZqWOXJ90yQp9YUsX-fchaydCUlVfdOmCN"
 
 
 def send_discord_notification(df, scan_name="Scan"):
