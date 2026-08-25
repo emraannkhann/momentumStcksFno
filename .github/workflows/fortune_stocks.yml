@@ -29,4 +29,4 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          python run_fortuneStocks.py
+          python runFortuneStocks.py
