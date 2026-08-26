@@ -3,7 +3,7 @@ name: Fortune Stocks 09:45 AM Screener
 on:
   schedule:
     # 03:45 UTC = 09:15 AM IST (Monday to Friday)
-    - cron: '45 3 * * 1-5'
+    - cron: '30 3 * * 1-5'
   workflow_dispatch: # Allows manual trigger anytime from GitHub UI
 
 jobs:
