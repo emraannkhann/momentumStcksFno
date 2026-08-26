@@ -1,4 +1,4 @@
-name: Fortune Stocks 09:45 AM Screener
+name: Fortune Stocks 09:30 AM IST Screener
 
 on:
   schedule:
