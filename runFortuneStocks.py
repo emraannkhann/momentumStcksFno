@@ -13,7 +13,7 @@ DISCORD_WEBHOOK_URL = os.environ.get(
 )
 
 IST = ZoneInfo("Asia/Kolkata")
-TARGET_EXEC_TIME = dt_time(9, 45)
+TARGET_EXEC_TIME = dt_time(9, 30)
 
 
 async def get_chartink_stocks():
