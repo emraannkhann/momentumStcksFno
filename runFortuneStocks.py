@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 import requests
 from playwright.async_api import async_playwright
 
-CHARTINK_URL = "https://chartink.com/screener/imr-fortunestocks"
+CHARTINK_URL = "https://chartink.com/screener/copy-intraday-bullish-1016"
 DISCORD_WEBHOOK_URL = os.environ.get(
     "DISCORD_WEBHOOK_URL",
     "https://discord.com/api/webhooks/1521804732140752978/Ca-tLLR4z5UiJ1fIsTbmKLmIp_qNqzaYkvJZqWOXJ90yQp9YUsX-fchaydCUlVfdOmCN",
